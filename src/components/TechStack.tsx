@@ -1,15 +1,5 @@
 import { motion } from 'motion/react'
-import {
-  Box,
-  Cloud,
-  Code2,
-  Database,
-  Layers,
-  Palette,
-  Server,
-  Sparkles,
-  Wind,
-} from 'lucide-react'
+import { Box, Code2, Layers, Palette, Sparkles } from 'lucide-react'
 import { SectionReveal } from '@/components/SectionReveal'
 import { useInView } from '@/hooks/useInView'
 

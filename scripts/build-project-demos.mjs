@@ -36,6 +36,17 @@ for (const { dir, slug } of demoProjects) {
     continue
   }
 
+  const nodeModules = path.join(projectPath, 'node_modules')
+  if (!fs.existsSync(nodeModules)) {
+    console.log(`  Installing dependencies…`)
+    const lockfile = path.join(projectPath, 'package-lock.json')
+    execSync(fs.existsSync(lockfile) ? 'npm ci' : 'npm install', {
+      cwd: projectPath,
+      stdio: 'inherit',
+      env: { ...process.env, CI: 'true' },
+    })
+  }
+
   console.log(`\n→ Building ${dir} (base: ${base})`)
   execSync(`npm run build -- --base=${base}`, {
     cwd: projectPath,
