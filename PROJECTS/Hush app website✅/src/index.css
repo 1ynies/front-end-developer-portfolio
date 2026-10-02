@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 232 44% 7%;
+  --foreground: 232 30% 94%;
+  --primary: 258 78% 70%;
+  --primary-foreground: 232 44% 8%;
+  --accent: 178 62% 60%;
+  --muted-foreground: 232 14% 62%;
+  --border: 232 26% 18%;
+  --card: 232 38% 11%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+
+@layer utilities {
+  .text-label {
+    @apply text-xs font-medium uppercase tracking-[0.16em] text-primary;
+  }
+
+  .heading-h1 {
+    font-weight: 700;
+    font-size: clamp(46px, 6.5vw, 96px);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+
+  .heading-h2 {
+    font-weight: 700;
+    font-size: clamp(32px, 4vw, 56px);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .section-pad {
+    @apply max-w-[1280px] mx-auto px-4 md:px-8 py-20 md:py-32;
+  }
+}

@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-background: hsl(0 0% 4%);
+  --color-surface: hsl(0 0% 7%);
+  --color-surface-raised: hsl(0 0% 10%);
+  --color-border: hsl(0 0% 13%);
+  --color-foreground: hsl(0 0% 95%);
+  --color-muted: hsl(0 0% 42%);
+  --color-primary: hsl(142 72% 50%);
+  --color-primary-dark: hsl(142 76% 38%);
+}
+
+:root {
+  --background: 0 0% 4%;
+  --surface: 0 0% 7%;
+  --surface-raised: 0 0% 10%;
+  --border: 0 0% 13%;
+  --foreground: 0 0% 95%;
+  --muted: 0 0% 42%;
+  --primary: 142 72% 50%;
+  --primary-dark: 142 76% 38%;
+  --primary-glow: 142 72% 50% / 0.12;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-sans);
+  letter-spacing: -0.04em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.glow-card {
+  border: 1px solid hsl(var(--border));
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.glow-card:hover {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 32px hsl(142 72% 50% / 0.12);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+  color: hsl(var(--primary));
+}

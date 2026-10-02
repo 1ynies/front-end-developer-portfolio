@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+:root {
+  --background: hsl(0 0% 0%);
+  --background-soft: hsl(0 0% 5%);
+  --foreground: hsl(0 0% 100%);
+  --foreground-muted: hsl(0 0% 60%);
+  --foreground-faint: hsl(0 0% 35%);
+  --border: hsl(0 0% 15%);
+  --card: hsl(0 0% 7%);
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background-size: 200px 200px;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+}
+
+.label-caps {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--foreground-faint);
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.btn-outline {
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: 2px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: black;
+}

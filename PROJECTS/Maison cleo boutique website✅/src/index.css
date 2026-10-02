@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cream: #fffef9;
+  --color-ink: #0a0a0a;
+  --color-terracotta: #c4622d;
+  --color-sand: #e8dcc8;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 8s ease-out forwards;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
