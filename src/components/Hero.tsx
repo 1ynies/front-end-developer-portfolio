@@ -28,7 +28,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08 }}
           >
-            Des apps que les gens utilisent vraiment.
+            Des sites que les gens utilisent vraiment.
             <span className="cursor-blink">|</span>
           </motion.h1>
 
@@ -51,11 +51,11 @@ export function Hero() {
             <Button type="button" onClick={() => scrollTo('#projets')}>
               Voir les projets →
             </Button>
-            <Button variant="ghost" type="button" asChild>
+            {/* <Button variant="ghost" type="button" asChild>
               <a href="#" onClick={(e) => e.preventDefault()}>
                 Télécharger le CV
               </a>
-            </Button>
+            </Button> */}
           </motion.div>
 
           <motion.div

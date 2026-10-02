@@ -53,7 +53,7 @@ export function About() {
           </SectionReveal>
         </div>
 
-        <SectionReveal delay={0.12}>
+        {/* <SectionReveal delay={0.12}>
           <div
             className="relative aspect-[4/5] max-w-md overflow-hidden rounded-xl border border-border bg-surface-raised lg:ml-auto"
             role="img"
@@ -74,7 +74,7 @@ export function About() {
               </p>
             </div>
           </div>
-        </SectionReveal>
+        </SectionReveal> */}
       </div>
     </section>
   )

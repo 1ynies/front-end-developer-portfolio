@@ -1,5 +1,6 @@
 import { SectionReveal } from '@/components/SectionReveal'
 import { Button } from '@/components/ui/button'
+import { contactEmail } from '@/data/site'
 
 export function ContactCTA() {
   return (
@@ -34,10 +35,10 @@ export function ContactCTA() {
         <SectionReveal delay={0.16}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Button type="button" asChild>
-              <a href="mailto:hiba.moukhlij@example.com">Démarrer un échange →</a>
+              <a href={`mailto:${contactEmail}`}>Démarrer un échange →</a>
             </Button>
             <Button variant="link" type="button" asChild>
-              <a href="mailto:hiba.moukhlij@example.com">Ou m&apos;écrire par email</a>
+              <a href={`mailto:${contactEmail}`}>Ou m&apos;écrire par email</a>
             </Button>
           </div>
           <p className="mt-6 text-xs font-light text-muted">

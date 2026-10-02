@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
-const social = [
-  { href: 'https://github.com', label: 'GitHub' },
-  { href: 'https://linkedin.com', label: 'LinkedIn' },
-  { href: 'https://twitter.com', label: 'Twitter' },
+const social: { href: string; label: string }[] = [
+  // Ajoute tes vrais liens ici, ex. :
+  // { href: 'https://github.com/ton-compte', label: 'GitHub' },
+  // { href: 'https://linkedin.com/in/ton-profil', label: 'LinkedIn' },
 ]
 
 export function Footer() {
